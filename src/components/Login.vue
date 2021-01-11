@@ -28,10 +28,16 @@
         label="验证码"
         placeholder="请输入验证码"
         style="padding-top:0;padding-bottom:0;"
+<<<<<<< HEAD
         :rules="[{required: true, message: '请输入验证码'},{ validator, message: '验证码不正确，请重新输入' }]"
       >
         <div class="code" @click="refreshCode" slot="button">
           <s-identify :identifyCode="identifyCode"></s-identify>
+=======
+      >
+        <div slot="button">
+          <img src="../assets/code/captcha1.jpg" alt="/" style="vertical-align:middle">
+>>>>>>> c676375a04c8c813d1366412360981c0602e8677
         </div>
       </van-field>
       <van-cell class="login-submit">
@@ -51,26 +57,37 @@
 </template>
 
 <script>
+<<<<<<< HEAD
 import SIdentify from '@/components/Base/identify'
+=======
+>>>>>>> c676375a04c8c813d1366412360981c0602e8677
 export default {
   name: 'Login',
   data () {
     return {
       username:'',
       password:'',
+<<<<<<< HEAD
       sms:'',
       identifyCodes: "1234567890",
       identifyCode: ""
+=======
+      sms:''
+>>>>>>> c676375a04c8c813d1366412360981c0602e8677
     }
   },
   methods: {
     onSubmit() {
       this.$router.push({path:'/Index'})
+<<<<<<< HEAD
       window.localStorage.setItem('token','');
+=======
+>>>>>>> c676375a04c8c813d1366412360981c0602e8677
     },
     // 跳转至注册页
     getRegister() {
       this.$router.push({path:'/Register'})
+<<<<<<< HEAD
     },
     randomNum(min, max) {
       return Math.floor(Math.random() * (max - min) + min);
@@ -102,6 +119,10 @@ export default {
     this.makeCode(this.identifyCodes, 4)
   },
   components:{SIdentify}
+=======
+    }
+  }
+>>>>>>> c676375a04c8c813d1366412360981c0602e8677
 }
 </script>
 
@@ -139,10 +160,13 @@ export default {
     color:#8C8C8C;
   }
 }
+<<<<<<< HEAD
 .code {
   margin: 0px auto;
   width: 114px;
   height: 40px;
   border: 1px solid #00B4FF;
 }
+=======
+>>>>>>> c676375a04c8c813d1366412360981c0602e8677
 </style>

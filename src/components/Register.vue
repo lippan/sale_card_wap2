@@ -11,10 +11,17 @@
         clearable
         label="图形验证"
         style="padding-top:0;padding-bottom:0;"
+<<<<<<< HEAD
         :rules="[{required: true, message: '请输入验证码'},{ validator, message: '验证码不正确，请重新输入' }]"
       >
         <div class="code" @click="refreshCode" slot="button">
           <s-identify :identifyCode="identifyCode"></s-identify>
+=======
+        clearable
+      >
+        <div slot="button">
+          <img src="../assets/code/captcha1.jpg" alt="/" style="vertical-align:middle">
+>>>>>>> c676375a04c8c813d1366412360981c0602e8677
         </div>
       </van-field>
       <van-field
@@ -50,7 +57,10 @@
 </template>
 
 <script>
+<<<<<<< HEAD
 import SIdentify from '@/components/Base/identify'
+=======
+>>>>>>> c676375a04c8c813d1366412360981c0602e8677
 export default {
   name: 'Register',
   data () {
@@ -63,9 +73,13 @@ export default {
       QQnumber:'',
       AlipayName:'',
       AlipayAccount:'',
+<<<<<<< HEAD
       checked:false,
       identifyCodes: "1234567890",
       identifyCode: ""
+=======
+      checked:false
+>>>>>>> c676375a04c8c813d1366412360981c0602e8677
     }
   },
   methods: {
@@ -78,6 +92,7 @@ export default {
     },
     getAgreement() {
       this.$router.push({path:'/Agreement'})
+<<<<<<< HEAD
     },
     randomNum(min, max) {
       return Math.floor(Math.random() * (max - min) + min);
@@ -108,6 +123,10 @@ export default {
       this.makeCode(this.identifyCodes, 4)
   },
   components:{SIdentify}
+=======
+    }
+  }
+>>>>>>> c676375a04c8c813d1366412360981c0602e8677
 }
 </script>
 
@@ -115,6 +134,14 @@ export default {
 <style scoped lang="less">
 
 .container{
+<<<<<<< HEAD
+=======
+//   .login-submit{
+//     &:after{
+//       border-bottom: none;
+//     }
+//   }
+>>>>>>> c676375a04c8c813d1366412360981c0602e8677
   .van-cell,.van-button--normal{
     font-size:16px;
   }
@@ -155,10 +182,13 @@ export default {
         color:#007aff;
     }
 }
+<<<<<<< HEAD
 .code {
   margin: 0px auto;
   width: 114px;
   height: 40px;
   border: 1px solid #00B4FF;
 }
+=======
+>>>>>>> c676375a04c8c813d1366412360981c0602e8677
 </style>

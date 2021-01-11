@@ -23,19 +23,31 @@
             <p>为你推荐</p>
             <van-grid :column-num="3" :gutter="12" clickable>
                 <van-grid-item class="grid-item grid-shadow" to="/CardType">
+<<<<<<< HEAD
                     <img src="../../assets/img/charge.png">
+=======
+                    <img src="../../assets/code/charge.png">
+>>>>>>> c676375a04c8c813d1366412360981c0602e8677
                     <p>
                         话费直充
                     </p>
                 </van-grid-item>
                 <van-grid-item class="grid-item grid-shadow" to="/CardType">
+<<<<<<< HEAD
                     <img src="../../assets/img/oil1.png">
+=======
+                    <img src="../../assets/code/oil1.png">
+>>>>>>> c676375a04c8c813d1366412360981c0602e8677
                     <p>
                         平安油卡话费
                     </p>
                 </van-grid-item>
                 <van-grid-item class="grid-item grid-shadow" to="/CardType">
+<<<<<<< HEAD
                     <img src="../../assets/img/card1.png">
+=======
+                    <img src="../../assets/code/card1.png">
+>>>>>>> c676375a04c8c813d1366412360981c0602e8677
                     <p>
                         卡密转让
                     </p>
@@ -44,13 +56,21 @@
             <p>话费充值</p>
             <van-grid :column-num="3" clickable>
                 <van-grid-item class="grid-item" to="/CardType">
+<<<<<<< HEAD
                     <img src="../../assets/img/charge.png">
+=======
+                    <img src="../../assets/code/charge.png">
+>>>>>>> c676375a04c8c813d1366412360981c0602e8677
                     <p>
                         话费直充
                     </p>
                 </van-grid-item>
                 <van-grid-item class="grid-item" to="/CardType">
+<<<<<<< HEAD
                     <img src="../../assets/img/card1.png">
+=======
+                    <img src="../../assets/code/card1.png">
+>>>>>>> c676375a04c8c813d1366412360981c0602e8677
                     <p>
                         年卡话费
                     </p>
@@ -59,13 +79,21 @@
             <p>油卡充值</p>
             <van-grid :column-num="3" clickable>
                 <van-grid-item class="grid-item" to="/CardType">
+<<<<<<< HEAD
                     <img src="../../assets/img/oil.png">
+=======
+                    <img src="../../assets/code/oil.png">
+>>>>>>> c676375a04c8c813d1366412360981c0602e8677
                     <p>
                         平安88折加油
                     </p>
                 </van-grid-item>
                 <van-grid-item class="grid-item" to="/CardType">
+<<<<<<< HEAD
                     <img src="../../assets/img/sand_icon.jpg">
+=======
+                    <img src="../../assets/code/sand_icon.jpg">
+>>>>>>> c676375a04c8c813d1366412360981c0602e8677
                     <p>
                         杉德充油卡
                     </p>
@@ -76,31 +104,51 @@
             <p>话费/石化/商超/代金券/游戏</p>
             <van-grid :column-num="3" clickable>
                 <van-grid-item class="grid-item" to="/CardType">
+<<<<<<< HEAD
                     <img src="../../assets/img/card_7.png">
+=======
+                    <img src="../../assets/code/card_7.png">
+>>>>>>> c676375a04c8c813d1366412360981c0602e8677
                     <p>
                         话费石化卡密
                     </p>
                 </van-grid-item>
                 <van-grid-item class="grid-item" to="/CardType">
+<<<<<<< HEAD
                     <img src="../../assets/img/card_4.png">
+=======
+                    <img src="../../assets/code/card_4.png">
+>>>>>>> c676375a04c8c813d1366412360981c0602e8677
                     <p>
                         电商/商超卡
                     </p>
                 </van-grid-item>
                 <van-grid-item class="grid-item" to="/CardType">
+<<<<<<< HEAD
                     <img src="../../assets/img/card_3.png">
+=======
+                    <img src="../../assets/code/card_3.png">
+>>>>>>> c676375a04c8c813d1366412360981c0602e8677
                     <p>
                         游戏视频会员
                     </p>
                 </van-grid-item>
                 <van-grid-item class="grid-item" to="/CardType">
+<<<<<<< HEAD
                     <img src="../../assets/img/card_8.png">
+=======
+                    <img src="../../assets/code/card_8.png">
+>>>>>>> c676375a04c8c813d1366412360981c0602e8677
                     <p>
                         美食电影代金券
                     </p>
                 </van-grid-item>
                 <van-grid-item class="grid-item" to="/CardType">
+<<<<<<< HEAD
                     <img src="../../assets/img/oil.png">
+=======
+                    <img src="../../assets/code/oil.png">
+>>>>>>> c676375a04c8c813d1366412360981c0602e8677
                     <p>
                         石化油卡
                     </p>
@@ -111,25 +159,41 @@
             <p>积分来换钱</p>
             <van-grid :column-num="3" clickable>
                 <van-grid-item class="grid-item" to="/CardType">
+<<<<<<< HEAD
                     <img src="../../assets/img/point_3.png">
+=======
+                    <img src="../../assets/code/point_3.png">
+>>>>>>> c676375a04c8c813d1366412360981c0602e8677
                     <p>
                         移动/联通/电信积分
                     </p>
                 </van-grid-item>
                 <van-grid-item class="grid-item" to="/CardType">
+<<<<<<< HEAD
                     <img src="../../assets/img/point_1.png">
+=======
+                    <img src="../../assets/code/point_1.png">
+>>>>>>> c676375a04c8c813d1366412360981c0602e8677
                     <p>
                         各类银行积分
                     </p>
                 </van-grid-item>
                 <van-grid-item class="grid-item" to="/CardType">
+<<<<<<< HEAD
                     <img src="../../assets/img/point_2.png">
+=======
+                    <img src="../../assets/code/point_2.png">
+>>>>>>> c676375a04c8c813d1366412360981c0602e8677
                     <p>
                        航空里程
                     </p>
                 </van-grid-item>
                 <van-grid-item class="grid-item" to="/CardType">
+<<<<<<< HEAD
                     <img src="../../assets/img/point_4.png">
+=======
+                    <img src="../../assets/code/point_4.png">
+>>>>>>> c676375a04c8c813d1366412360981c0602e8677
                     <p>
                         其他积分
                     </p>
