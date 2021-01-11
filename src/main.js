@@ -5,12 +5,8 @@ import App from './App'
 import router from './router'
 
 Vue.config.productionTip = false
-<<<<<<< HEAD
 import { Loading, Form, Field, Button, Cell, CellGroup, Checkbox, Tabbar, TabbarItem, Icon, Dialog, NoticeBar, Swipe, SwipeItem, Grid, GridItem, Col, Row  } from 'vant';
 Vue.use(Loading);
-=======
-import { Form, Field, Button, Cell, CellGroup, Checkbox, Tabbar, TabbarItem, Icon, Dialog, NoticeBar, Swipe, SwipeItem, Grid, GridItem, Col, Row  } from 'vant';
->>>>>>> c676375a04c8c813d1366412360981c0602e8677
 Vue.use(Form);
 Vue.use(Field);
 Vue.use(Button);

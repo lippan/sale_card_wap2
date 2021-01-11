@@ -1,15 +1,11 @@
 <template>
   <div id="app">
-<<<<<<< HEAD
 	<loading v-show="isLoading === 'true'"></loading>
-=======
->>>>>>> c676375a04c8c813d1366412360981c0602e8677
     <router-view/>
   </div>
 </template>
 
 <script>
-<<<<<<< HEAD
 import loading from "./components/Base/Loading";
 export default {
   name: 'App',
@@ -27,10 +23,6 @@ export default {
 	  }
   },
   components:{loading}
-=======
-export default {
-  name: 'App'
->>>>>>> c676375a04c8c813d1366412360981c0602e8677
 }
 </script>
 
@@ -96,7 +88,6 @@ table {
 .text-right{
   text-align: right;
 }
-<<<<<<< HEAD
 .loading {
   width: 100%;
   height: 100%;
@@ -105,7 +96,4 @@ table {
   position: fixed;
   padding-top: 5.333333rem;
 }
-=======
-
->>>>>>> c676375a04c8c813d1366412360981c0602e8677
 </style>

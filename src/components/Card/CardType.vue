@@ -12,31 +12,19 @@
                 <ul class="right-item" v-if="active==='one'">
                     <li @click="getDetailTask">
                         <span class="icon-img">
-<<<<<<< HEAD
                             <img src="../../assets/img/oil.png">
-=======
-                            <img src="../../assets/code/oil.png">
->>>>>>> c676375a04c8c813d1366412360981c0602e8677
                         </span>
                         中石化加油卡
                     </li>
                     <li>
                         <span class="icon-img">
-<<<<<<< HEAD
                             <img src="../../assets/img/oil.png">
-=======
-                            <img src="../../assets/code/oil.png">
->>>>>>> c676375a04c8c813d1366412360981c0602e8677
                         </span>
                         中石化纯卡密
                     </li>
                     <li>
                         <span class="icon-img">
-<<<<<<< HEAD
                             <img src="../../assets/img/cardicon_1558339431.png">
-=======
-                            <img src="../../assets/code/cardicon_1558339431.png">
->>>>>>> c676375a04c8c813d1366412360981c0602e8677
                         </span>
                         移动充值卡密
                     </li>
@@ -44,31 +32,19 @@
                 <ul class="right-item" v-if="active==='two'">
                     <li>
                         <span class="icon-img">
-<<<<<<< HEAD
                             <img src="../../assets/img/cardicon_1558338134.png">
-=======
-                            <img src="../../assets/code/cardicon_1558338134.png">
->>>>>>> c676375a04c8c813d1366412360981c0602e8677
                         </span>
                         杉德购物卡                                                                                           
                     </li>
                     <li>
                         <span class="icon-img">
-<<<<<<< HEAD
                             <img src="../../assets/img/cardicon_1558338206.png">
-=======
-                            <img src="../../assets/code/cardicon_1558338206.png">
->>>>>>> c676375a04c8c813d1366412360981c0602e8677
                         </span>
                         壹卡会                                                                                           
                     </li>
                     <li>
                         <span class="icon-img">
-<<<<<<< HEAD
                             <img src="../../assets/img/cardicon_1558338079.png">
-=======
-                            <img src="../../assets/code/cardicon_1558338079.png">
->>>>>>> c676375a04c8c813d1366412360981c0602e8677
                         </span>
                         纸质的万里通券                                                                                                                                                                                      
                     </li>
