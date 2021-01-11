@@ -2,11 +2,7 @@
     <div>
         <van-cell is-link center @click="getUserInfor">
             <div class="div-flex user-title">
-<<<<<<< HEAD
                 <img src="../../assets/img/head_icon_2.png" alt="/">
-=======
-                <img src="../../assets/code/head_icon_2.png" alt="/">
->>>>>>> c676375a04c8c813d1366412360981c0602e8677
                 <div class="user-infor">
                     <p>张三</p>
                     <p>15200253654</p>
