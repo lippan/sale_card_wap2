@@ -13,6 +13,7 @@
             <van-cell title="我的问题工单" icon="coupon-o" is-link icon-color="#1989fa"/>
 
             <van-cell title="退款与罚款" icon="gold-coin-o" is-link/>
+            <van-cell title="退出登录" icon="close" is-link @click="loginOut"/>
         </van-cell-group>
     </div>
 </template>
@@ -21,6 +22,9 @@ export default {
     methods:{
         getUserInfor(){
             this.$router.push({path:'/UserInfor'})
+        },
+        loginOut() {
+            this.$router.push({path:'/'})
         }
     }
 }
