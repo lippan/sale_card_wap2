@@ -69,11 +69,12 @@ export default {
   },
   methods: {
     onSubmit() {
-      this.$router.push({path:'/Index'})
+
       window.localStorage.setItem('token','');
       LoginApi(this.userInfor).then((res)=>{
-        if(res.data.Status === 200) {
-          console.log(res)
+        if(res.data.code === 2000) {
+            console.log(res)
+            this.$router.push({path:'/Index'})
         }
       }).catch((err)=>{
         console.log(err)
