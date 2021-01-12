@@ -7,8 +7,8 @@
             </div>
             <p class="task-order">请先选择您要提交的面值</p>
             <ul class="price-list">               
-                <li class="price-item" @click="showPriceDialog">
-                    <p class="price">100元</p>
+                <li class="price-item">
+                    <p class="price" @click="showPriceDialog">100元</p>
                     <p class="discount">98.3折</p>
                 </li>
                 <li class="price-item">
@@ -147,18 +147,31 @@
                      <van-icon name="cross" class="close-icon" @click="closeDialog"/>
                 </div>
                 <div class="dialog-con">
-                    <p>面值: 100元&nbsp;&nbsp;&nbsp;&nbsp;转让折扣: <b>98.30</b></p>
-                    <van-field
+                    <p class="div-flex">
+                        <span>面值: 100元&nbsp;&nbsp;&nbsp;&nbsp;转让折扣: <b>98.30</b></span>
+                        <van-button icon="plus" type="info" round size="small" @click="Add"/>
+                    </p>
+
+                    <div v-for="(item,index) in TaskArray" :key="index" class="div-flex" style="margin-bottom:15px;">
+                        <van-cell-group>                            
+                            <van-field v-model="item.cardNum" label="卡号" placeholder="请输入卡号"  size="small" clearable/>
+                            <van-field v-model="item.cardPassword" label="密码" placeholder="请输入卡密"  size="small" clearable/>                                                        
+                        </van-cell-group>        
+                        <van-button icon="minus" type="info" round size="small" @click="Delete(item)"/>
+                    </div>
+                    <!-- <van-field
                         v-model="message"
                         rows="4"
                         autosize
                         type="textarea"
                         class="dialog-msg"
                         placeholder="卡号卡密之间自动用空格隔开，输完一张自动换行  卡号长度：16位，卡密长度：20位； 如下 1476806952423111  15003685906991321739  4437653637380256  84512144870622596882"
-                    />
-                    <p style="font-size:14px">您已输入 <span style="font-size: 18px;color: red;">0</span> 张</p>
-                    <van-checkbox v-model="checked" class="dialog-check">我已阅读并接受<a href="javascript:" @click="getAgreement">《蜜蜂收卡闲置资源转让协议》</a></van-checkbox>
-                    <van-checkbox v-model="checked" class="dialog-check">我已阅读并接受<a href="javascript:" @click="getRules">《蜜蜂收卡卡密转让规则》</a></van-checkbox>
+                    /> -->
+                    <p style="font-size:14px" class="div-flex">
+                        <span>您已输入 <span style="font-size: 18px;color: red;">{{TaskArray.length>0?TaskArray.length:0}}</span> 张</span>
+                    </p>
+                    <van-checkbox v-model="checked1" class="dialog-check">我已阅读并接受<a href="javascript:" @click="getAgreement">《蜜蜂收卡闲置资源转让协议》</a></van-checkbox>
+                    <van-checkbox v-model="checked2" class="dialog-check">我已阅读并接受<a href="javascript:" @click="getRules">《蜜蜂收卡卡密转让规则》</a></van-checkbox>
                     <van-cell>
                         <van-button block type="info" native-type="submit" @click="submit">确认提交</van-button>
                     </van-cell>
@@ -174,7 +187,11 @@ export default {
         return{
             dialogShow:false,
             message:'',
-            checked:false,
+            checked1:false,
+            checked2:false,
+            cardNum:'',
+            cardPassword:'',
+            TaskArray:[{id:'',cardNum:'',cardPassword:''}]
         }
     },
     methods:{
@@ -192,6 +209,16 @@ export default {
         },
         submit() {
             this.dialogShow = false
+        },
+        // 新增
+        Add(){
+            let obj= {id:'',cardNum:'',cardPassword:''};
+            let addObj = JSON.parse(JSON.stringify(obj));
+            this.TaskArray.push(addObj);
+        },
+        // 删除
+        Delete(item) {
+            this.TaskArray.splice(this.TaskArray.indexOf(item), 1);
         }
     }
 }
@@ -298,9 +325,20 @@ export default {
 }
 .dialog-con{
     padding:5px 6px 15px;
+    max-height: 60vh;
+    overflow-y: auto;
+    .van-cell{
+        padding:5px 16px;
+    }
     p{
         padding:10px 0;
+        
     }
+    .div-flex{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     .dialog-msg{
         border:1px solid #ddd;
         border-radius: 8px;
