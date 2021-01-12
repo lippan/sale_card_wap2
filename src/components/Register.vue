@@ -23,21 +23,21 @@
         clearable
         label="短信验证码"
       >
-        <template #button>
+        <!--<template #button>
           <van-button size="small" type="primary">发送验证码</van-button>
-        </template>
+        </template>-->
       </van-field>
     <van-field v-model="password" type="password" label="设置密码" clearable/>
-    <van-field v-model="confirmpassword" type="password" label="确认密码" clearable/>
-    <van-field v-model="QQnumber" type="digit" label="QQ" clearable/>
+    <van-field v-model="repassword" type="password" label="确认密码" clearable/>
+    <van-field v-model="qq" type="digit" label="QQ" clearable/>
     <div class="other-infor">
         <span class="col-green">支付宝信息</span>
         <p>            
             以下是您的收款信息，请认真填写，如果因为个人原因导致无法收款，后果自负。           
         </p>
     </div>
-    <van-field v-model="AlipayName" label="支付宝姓名" clearable/>
-    <van-field v-model="AlipayAccount" label="支付宝账号" clearable/>
+    <van-field v-model="alipay_name" label="支付宝姓名" clearable/>
+    <van-field v-model="alipay_account" label="支付宝账号" clearable/>
     <div class="pdtl2016">
         <van-checkbox v-model="checked" checked-color="#07c160" class="regis-check">已阅读并接受<a href="javascript:" @click="getAgreement">《mf178闲置资源转让协议》</a></van-checkbox>
         <van-button block type="primary" native-type="submit" style="margin-top:20px;">注册</van-button>
@@ -59,10 +59,10 @@ export default {
       piccode:'',
       sms:'',
       password:'',
-      confirmpassword:'',
-      QQnumber:'',
-      AlipayName:'',
-      AlipayAccount:'',
+      repassword:'',
+      qq:'',
+      alipay_name:'',
+        alipay_account:'',
       checked:false,
       identifyCodes: "1234567890",
       identifyCode: ""
@@ -70,7 +70,7 @@ export default {
   },
   methods: {
     onSubmit() {
-
+        http
     },
     // 跳转至登录页
     getLogin() {
