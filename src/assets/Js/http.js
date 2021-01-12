@@ -1,11 +1,10 @@
 import axios from "axios";
-import deveEnvJs from "../../../config/dev.env.js";
-import prodenvjs from "../../../config/prod.env.js";
-import router from "../../router/router";
+import router from "../../router";
 import { Dialog  } from 'vant'; // vant组件
 
-var source = axios.CancelToken.source();
-var request = axios.create({
+// var source = axios.CancelToken.source();
+// create an axios instance
+const request = axios.create({
   baseURL: process.env.API_ROOT, //服务器接口地址及端口
   // withCredentials: true, // 是否允许带cookie这些
   headers: {

@@ -5,7 +5,7 @@
     </p>
     <van-form @submit="onSubmit">
       <van-field
-        v-model="username"
+        v-model="userInfor.username"
         name="用户名"
         label="账号"
         placeholder="请填写登录账号"
@@ -13,7 +13,7 @@
         :rules="[{ required: true}]"
       />
       <van-field
-        v-model="password"
+        v-model="userInfor.password"
         type="password"
         name="密码"
         label="密码"
@@ -22,7 +22,7 @@
         :rules="[{ required: true}]"
       />
       <van-field
-        v-model="sms"
+        v-model="userInfor.sms"
         center
         clearable
         label="验证码"
@@ -51,14 +51,18 @@
 </template>
 
 <script>
+import {LoginApi} from '../api/login'
 import SIdentify from '@/components/Base/identify'
 export default {
   name: 'Login',
   data () {
     return {
-      username:'',
-      password:'',
-      sms:'',
+      userInfor:{
+        username:'',
+        password:'',
+        sms:'',
+      },
+     
       identifyCodes: "1234567890",
       identifyCode: ""
     }
@@ -67,6 +71,13 @@ export default {
     onSubmit() {
       this.$router.push({path:'/Index'})
       window.localStorage.setItem('token','');
+      LoginApi(this.userInfor).then((res)=>{
+        if(res.data.Status === 200) {
+          console.log(res)
+        }
+      }).catch((err)=>{
+        console.log(err)
+      })
     },
     // 跳转至注册页
     getRegister() {
