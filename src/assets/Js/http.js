@@ -35,13 +35,13 @@ request.interceptors.request.use(
 request.interceptors.response.use(
   response => {
     window.localStorage.setItem('loading',false); // 关闭loading动画
-    if (response.data.StatusCode !== 200) {
+    if (response.data.StatusCode !== 2000) {
       //code为非200是抛错 可结合自己业务进行修改
-      if (response.data.StatusCode === 401) {
+      if (response.data.StatusCode === 4001) {
         // 401 因token错误而退出登陆;
         Dialog({ message: '账户在其他平台登陆，退出登录' });
         router.push("/"); // 跳回登录页
-      } else if (response.data.StatusCode === 401) {
+      } else if (response.data.StatusCode === 4001) {
         Dialog({ message: '该账号已被禁用，退出登录' });
         router.push("/"); // 跳回登录页
       } else if (response.data.StatusCode === 500) {
@@ -59,7 +59,7 @@ request.interceptors.response.use(
   },
   err => {
     window.localStorage.setItem('loading',false); // 关闭loading动画
-    err.status === 401 ? router.push("/") : console.log(err);
+    err.status === 4001 ? router.push("/") : console.log(err);
     return Promise.reject(err);
   }
 );
